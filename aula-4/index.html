@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <h1>Formulário de Cadastro</h1>
+      <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="user_name" name="name" placeholder="Digite seu nome" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" onfocusout="buscarCEP()" name="cep" placeholder="Digite seu CEP" required>
+
+        <label for="street">Rua:</label>
+        <input type="text" id="street" name="street" placeholder="Digite sua rua" required>
+
+        <label for="neighborhood">Bairro:</label>
+        <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite seu bairro" required>
+
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" name="city" placeholder="Digite sua cidade" required>
+
+        <label for="state">Estado:</label>
+        <input type="text" id="state" name="state" placeholder="Digite seu estado" required>
+
+        <label for="file">Anexar Arquivo:</label>
+        <input type="file" id="file" name="file" onchange="showFile(this)">
+
+        <button type="button" onclick="save()">Salvar</button>
+
+      </form>
+      <script src="./index.js"></script>
+    </div>
+  </div>
+</body>
+</html>
